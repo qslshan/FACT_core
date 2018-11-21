@@ -87,7 +87,7 @@ def main(radare, nginx):
 
         _patch_bootstrap()
 
-        wget_static_web_content('https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js', 'bootstrap/js', [], 'jquery')
+        wget_static_web_content('https://cdn.bootcss.com/jquery/1.12.0/jquery.min.js', 'bootstrap/js', [], 'jquery')
         wget_static_web_content('https://raw.githubusercontent.com/Eonasdan/bootstrap-datetimepicker/master/build/js/bootstrap-datetimepicker.min.js', 'bootstrap/js', [], 'datetimepicker js')
         wget_static_web_content('https://raw.githubusercontent.com/Eonasdan/bootstrap-datetimepicker/master/build/css/bootstrap-datetimepicker.min.css', 'bootstrap/css', [], 'datetimepicker css')
         wget_static_web_content('https://raw.githubusercontent.com/moment/moment/develop/moment.js', 'bootstrap/js', [], 'moment.js')
@@ -99,7 +99,7 @@ def main(radare, nginx):
             shutil.rmtree('jstree')
         wget_static_web_content('https://github.com/vakata/jstree/zipball/3.3.2', '.', ['unzip 3.3.2', 'rm 3.3.2', 'mv vakata* jstree'], 'jstree')
 
-        wget_static_web_content('https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js', '.', [], 'angularJS')
+        wget_static_web_content('https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular.min.js', '.', [], 'angularJS')
         wget_static_web_content('https://github.com/chartjs/Chart.js/releases/download/v2.3.0/Chart.js', '.', [], 'charts.js')
 
     # create user database
